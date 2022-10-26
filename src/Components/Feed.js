@@ -9,27 +9,23 @@ const Feed = () => {
     const [post, setPost] = useState([]);
     
     function post_color(color){
-      setPost((post => [...post, <Block color={color} />]))
+      setPost(post => [color, ...post])
     }
 
     
     
     /* Use the map() function to render multiple Blocks! */
-    // const posts = post.map() // TODO: edit this variable
+    const posts = post.map(color => (
+        <Block color = {color}></Block>
+    )) // TODO: edit this variable
 
-    function show_block(){
-        return (
-            <div>
-                {post}
-            </div>
-        )
-    }
+    
     return (
         <div>
             <Menu function = {post_color}></Menu>
 
             {/* Below is where all of your Blocks should render! */}
-            {show_block()}
+            {posts}
         </div>
     );
 }

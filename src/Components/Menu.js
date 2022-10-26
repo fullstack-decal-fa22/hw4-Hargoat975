@@ -7,10 +7,10 @@ const Menu = (props) => {
     let post_color = props.function
     return (
       <div className="colorOptions">
-          <Color handleclick = {post_color("red")} color="red" />
-          <Color handleclick = {post_color("pink")} color="pink" />
-          <Color handleclick = {post_color("green")} color="green" />
-          <Color handleclick = {post_color("blue")} color="blue" />
+          <Color handleclick = {post_color} color="red" />
+          <Color handleclick = {post_color} color="pink" />
+          <Color handleclick = {post_color} color="green" />
+          <Color handleclick = {post_color} color="blue" />
       </div>
     );
 }
